@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -15,7 +15,7 @@ class SignupView(CreateView):
     model = User
     form_class = SignupForm
     template_name = 'signup.html'
-    success_url = reverse('home')
+    success_url = reverse_lazy('home')
     
     def form_valid(self, form):
         """ auto-login once signed up. """
