@@ -3,4 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 div.content { margin: 16px; padding: 16px; }
+
+.custom-navbar-color {
+      background-color: #000042;
+    }
