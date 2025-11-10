@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 
 from django.contrib.auth import login
@@ -31,3 +31,4 @@ class PassengerUpdateView(LoginRequiredMixin, UpdateView):
     
     def get_success_url(self):
         return reverse('home')
+
