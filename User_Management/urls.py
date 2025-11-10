@@ -3,7 +3,7 @@ from .views import *
 
 urlpatterns = [
     path('signup/', SignupView.as_view(), name='signup'),
-    path('<int:pk>/', PassengerUpdateView.as_view(), name='update'),
+    path('<int:pk>/', PassengerInfoView.as_view(), name='update'),
 ]
 
 app_name = 'User_Management'

@@ -9,14 +9,11 @@ class Passenger(models.Model):
     first_name = models.CharField(max_length=50, blank=True)
     middle_name = models.CharField(max_length=50, blank=True)
     last_name = models.CharField(max_length=50, blank=True)
-    birthdate = models.DateField()
+    birthdate = models.DateField(null=True, blank=True)
     gender = models.CharField(
         max_length=1, 
         choices=[('F', 'Female'), ('M', 'Male')], 
         default='', blank=False, null=False
-        default='', 
-        blank=False, 
-        null=False
     )
     
     def __str__(self):

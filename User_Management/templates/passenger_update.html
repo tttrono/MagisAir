@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load django_bootstrap5 %}
+{% load bootstrap5 %}
 
 {% block title %} Profile {% endblock title %}
 
@@ -10,7 +10,8 @@
 		<h3> Profile </h3>
 		<form method="POST" action="">
 	        {% csrf_token %} 
-	        {% bootstrap_form form  set_placeholder=False%}
+			{{ form.media }}
+	        {% bootstrap_form form set_placeholder=False%}
 	        <button type="submit"> Update </button>
 	    
 		</form>
