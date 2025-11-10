@@ -13,9 +13,7 @@ class Passenger(models.Model):
     gender = models.CharField(
         max_length=1, 
         choices=[('F', 'Female'), ('M', 'Male')], 
-        default='', 
-        blank=False, 
-        null=False
+        default='', blank=False, null=False
     )
     
     def __str__(self):
