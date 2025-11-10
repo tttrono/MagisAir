@@ -10,7 +10,13 @@ class Passenger(models.Model):
     middle_name = models.CharField(max_length=50, blank=True)
     last_name = models.CharField(max_length=50, blank=True)
     birthdate = models.DateField()
-    gender = models.CharField(max_length=1, choices=[('F', 'Female'), ('M', 'Male')]), default='M', blank=False, null=False)
+    gender = models.CharField(
+        max_length=1, 
+        choices=[('F', 'Female'), ('M', 'Male')], 
+        default='', 
+        blank=False, 
+        null=False
+    )
     
     def __str__(self):
         return f'{str(self.last_name)}, {str(self.first_name)} {str(self.middle_name)[0]}.'
