@@ -16,21 +16,12 @@ class SignupView(CreateView):
 	model = User
 	form_class = SignupForm
 	template_name = 'signup.html'
-	success_url = reverse_lazy('home')
     
 	def form_valid(self, form):
 		""" auto-login once signed up. """
 		user = form.save()
 		login(self.request, user) 
-		return redirect(self.success_url)
-		
-	def get_success_url(self):
-		return redirect('passenger', args=[self.request.user.pk])
-	
-class SignupDoneView(TemplateView):
-    """A message view for a new user to complete passenger information. """
-    model = User
-    template_name = 'signup_done.html'
+		return redirect('User_Management:update', pk=user.pk)
   
 class PassengerInfoView(LoginRequiredMixin, UpdateView):
     """ An update view for passenger information. """
