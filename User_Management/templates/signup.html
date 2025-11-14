@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 {% load bootstrap5 %}
 
-{% block title %} {% endblock %}
+{% block title %} | Create an account{% endblock %}
 
 {% block content %}
 
 	<div class="content" style="width:460px;">
-		<h3>Sign up</h3>
+		<h3>Create an account</h3>
   	
 	  	<form method="post">
 	    	{% csrf_token %}
 	    	{% bootstrap_form form set_placeholder=False %}
-	    	<button type="submit"> Signup </button>
+	    	<button type="submit"> Create my account </button>
 	  	</form>
   	</div>
 

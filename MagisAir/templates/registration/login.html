@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load bootstrap5 %}
 
-{% block title %} Login {% endblock title %}
+{% block title %} | Login {% endblock title %}
 
 {% block content %}
 
-	<div class="content" style="width:400px;">
-		<h3>Login</h3>
+	<div class="content" style="width:500px;">
+		<h3>Login to your Magis Air account</h3><br>
 		
 		<form method="POST">
 			{% csrf_token %}
