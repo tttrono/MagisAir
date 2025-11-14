@@ -22,10 +22,9 @@ class SignupView(CreateView):
 		user = form.save()
 		login(self.request, user) 
 		return redirect(self.success_url)
-		#return reverse('passenger:update', args=[self.object.pk])
 		
-	#def get_success_url(self):
-	#	return reverse('passenger:update', args=[self.object.pk])
+	def get_success_url(self):
+		return redirect('passenger', args=[self.request.user.pk])
   
 class PassengerInfoView(LoginRequiredMixin, UpdateView):
     """ An update view for passenger information. """
