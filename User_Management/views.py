@@ -30,7 +30,7 @@ class PassengerInfoView(LoginRequiredMixin, UpdateView):
     """ An update view for passenger information. """
     model = Passenger
     form_class = PassengerForm
-    template_name = 'passenger_update.html'
+    template_name = 'passenger_information.html'
     
     def get_success_url(self):
         return reverse('home')
