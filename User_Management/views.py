@@ -4,6 +4,7 @@ from django.urls import reverse, reverse_lazy
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.auth.models import User
 
@@ -25,6 +26,11 @@ class SignupView(CreateView):
 		
 	def get_success_url(self):
 		return redirect('passenger', args=[self.request.user.pk])
+	
+class SignupDoneView(TemplateView):
+    """A message view for a new user to complete passenger information. """
+    model = User
+    template_name = 'signup_done.html'
   
 class PassengerInfoView(LoginRequiredMixin, UpdateView):
     """ An update view for passenger information. """
