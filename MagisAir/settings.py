@@ -47,7 +47,6 @@ INSTALLED_APPS = [
 	'bootstrap5',
 	'bootstrap_datepicker_plus',
     'Passenger',
-    'django_rename_app'
 ]
 
 MIDDLEWARE = [
