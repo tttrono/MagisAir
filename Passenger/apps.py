@@ -1,0 +1,9 @@
+from django.apps import AppConfig
+
+class PassengerConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'Passenger'
+    
+    def ready(self):
+        """Configure signals for Passenger module. """
+        import Passenger.signals

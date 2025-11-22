@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block title %} | Passenger Information {% endblock title %}
+
+{% block content %}
+	
+	<div class="content" style="width:400px;">
+		
+		<h3> Passenger Information </h3><br>
+		<form method="POST" action="">
+	        {% csrf_token %} 
+			{{ form.media }}
+	        {% bootstrap_form form set_placeholder=False%}
+	        <button type="submit" class="btn btn-secondary"> Update </button>
+	    
+		</form>
+	</div>
+	
+{% endblock %}
