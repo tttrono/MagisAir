@@ -26,3 +26,4 @@ urlpatterns = [
 	path('passenger/', include('User_Management.urls', namespace='passenger')),
     path('', include('bookings.urls'))
 ]
+

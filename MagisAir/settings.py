@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 	'django_bootstrap5',
 	'bootstrap_datepicker_plus',
-    'User_Management'
+    'User_Management',
+    'bookings'
 ]
 
 MIDDLEWARE = [
